@@ -1,4 +1,4 @@
-package com.common;
+package com.common.es;
 
 import java.io.IOException;
 import java.util.Map;

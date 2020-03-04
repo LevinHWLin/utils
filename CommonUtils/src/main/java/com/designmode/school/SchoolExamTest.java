@@ -1,6 +1,6 @@
-package com.common.school;
+package com.designmode.school;
 
-import com.common.school.factory.SchoolExamFactory;
+import com.designmode.school.factory.SchoolExamFactory;
 
 public class SchoolExamTest {
 

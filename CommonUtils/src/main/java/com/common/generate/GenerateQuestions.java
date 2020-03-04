@@ -1,6 +1,5 @@
 package com.common.generate;
 
-import com.common.SchoolUserExamQuestions;
 import com.common.enums.AnswerOptionsEnum;
 import com.common.polyv.BaseConfig;
 import net.sf.json.JSONArray;

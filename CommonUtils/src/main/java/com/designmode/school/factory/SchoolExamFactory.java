@@ -1,9 +1,8 @@
-package com.common.school.factory;
+package com.designmode.school.factory;
 
-import com.common.factch.AbstractGoodFactory;
-import com.common.school.AbstractSchoolExamFactory;
-import com.common.school.BaseSchoolExamHandler;
-import com.common.school.ISchoolExamHandlerService;
+import com.designmode.school.AbstractSchoolExamFactory;
+import com.designmode.school.BaseSchoolExamHandler;
+import com.designmode.school.ISchoolExamHandlerService;
 
 public class SchoolExamFactory extends AbstractSchoolExamFactory {
 

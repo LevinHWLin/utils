@@ -1,7 +1,7 @@
-package com.common.school.factory;
+package com.designmode.school.factory;
 
-import com.common.school.BaseSchoolExamHandler;
-import com.common.school.ISchoolExamHandlerService;
+import com.designmode.school.BaseSchoolExamHandler;
+import com.designmode.school.ISchoolExamHandlerService;
 
 import java.util.Map;
 

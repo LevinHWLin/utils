@@ -1,4 +1,4 @@
-package com.common.factch;
+package com.designmode.factch;
 
 import java.util.Map;
 

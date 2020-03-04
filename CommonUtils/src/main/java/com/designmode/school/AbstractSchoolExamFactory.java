@@ -1,4 +1,4 @@
-package com.common.school;
+package com.designmode.school;
 
 /**
  * 课堂考试抽象父类接口

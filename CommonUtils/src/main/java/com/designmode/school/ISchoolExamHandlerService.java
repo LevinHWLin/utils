@@ -1,4 +1,4 @@
-package com.common.school;
+package com.designmode.school;
 
 import java.util.Map;
 

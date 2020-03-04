@@ -1,4 +1,4 @@
-package com.common;
+package com.common.generate;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -1,6 +1,4 @@
-package com.common.school;
-
-import java.util.Map;
+package com.designmode.school;
 
 public class BaseSchoolExamHandler {
 
