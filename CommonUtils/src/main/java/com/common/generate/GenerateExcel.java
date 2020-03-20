@@ -19,7 +19,7 @@ public class GenerateExcel
     {
        //generateSql();
 
-        File xlsFile = new File("C:\\Users\\Administrator\\Desktop\\问答社区日志\\symphony_article_update20200120.xlsx");
+        File xlsFile = new File("C:\\Users\\Administrator\\Desktop\\问答社区日志\\symphony_article_update20200306.xlsx");
         /**
          * 这里根据不同的excel类型
          * 可以选取不同的处理类：

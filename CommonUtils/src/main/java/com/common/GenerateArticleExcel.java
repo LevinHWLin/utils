@@ -24,8 +24,8 @@ public class GenerateArticleExcel
             IOException
     {
         try{
-            String[] fileNames = {"symphony_article_base.xlsx"};
-            String cleanFilePath = "C:\\Users\\Administrator\\Desktop\\问答社区日志\\symphony_article202002280931.xlsx";
+            String[] fileNames = {"symphony_article_base.xlsx","symphony_article202002280931.xlsx"};
+            String cleanFilePath = "C:\\Users\\Administrator\\Desktop\\问答社区日志\\symphony_article20200306.xlsx";
             String filePath = "C:\\Users\\Administrator\\Desktop\\问答社区日志\\";
 
         for(String fileName : fileNames){
