@@ -31,8 +31,9 @@ public class PptToPdfDemo {
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             PdfWriter.getInstance(pdfDocument, fileOutputStream);
             pdfDocument.open();
+            pdfDocument.open();
 
-            File pptFile = new File("E:\\pdf\\高级企业版介绍.pptx");
+            File pptFile = new File("E:\\pdf\\山东苹果作物知识.pptx");
             FileInputStream fin = new FileInputStream(pptFile);
             //BufferedInputStream reader = new BufferedInputStream(fin);
 
@@ -46,12 +47,21 @@ public class PptToPdfDemo {
             Dimension pgsize = xmlSlideShow.getPageSize();
             String uid = CommonUtil.getUuid();
             int index = 1;
+            int image_rate = 1;
             for (XSLFSlide xslfSlide : xmlSlideShow.getSlides()) {
-                BufferedImage img = new BufferedImage(pgsize.width, pgsize.height, BufferedImage.TYPE_INT_RGB);
+                int imageWidth = (int) Math.floor(image_rate * pgsize.width);
+                int imageHeight = (int) Math.floor(image_rate * pgsize.height)+100;
+
+                BufferedImage img = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_ARGB);
                 Graphics2D graphics = img.createGraphics();
-                //graphics.scale(1,1);
-                graphics.setPaint(Color.BLUE);
-                graphics.fill(new Rectangle2D.Float(0, 0, pgsize.width, pgsize.height));
+                graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                graphics.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+                graphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+                graphics.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+                // clear the drawing area
+                graphics.setPaint(Color.white);
+                graphics.fill(new Rectangle2D.Float(0, 0, imageWidth, imageHeight));
+                graphics.scale(image_rate, image_rate);
                 xslfSlide.draw(graphics);
 
                 File path = new File("E:\\pdf\\images");
@@ -59,10 +69,10 @@ public class PptToPdfDemo {
                     path.mkdir();
                 }
 
-                String imagePath = path + "/" + uid+"_"+index + ".jpg";
+                String imagePath = path + "/" + uid+"_"+index + ".png";
                 ++index;
                 FileOutputStream out = new FileOutputStream(imagePath);
-                javax.imageio.ImageIO.write(img, "jpg", out);
+                javax.imageio.ImageIO.write(img, "png", out);
 
                 pdfDocument.newPage();
                 Image image = Image.getInstance(imagePath);
