@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!-- @BeforeSuite -->
+<suite name="TestAll">
+
+    <!-- @BeforeTest -->
+    <test name="case1">
+        <classes>
+            <class name="com.demo.testng.TestNgDemo" />
+            <class name="com.demo.testng.TestNgConfig" />
+        </classes>
+    </test>
+    <!-- @AfterTest -->
+
+    <!-- @BeforeTest -->
+    <test name="case2">
+        <classes>
+            <class name="com.demo.testng.TestNgDemo" />
+            <class name="com.demo.testng.TestNgConfig" />
+        </classes>
+    </test>
+    <!-- @AfterTest -->
+
+</suite>
